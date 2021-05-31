@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { PieChart } from 'react-native-svg-charts'
 
 const randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
@@ -30,20 +30,46 @@ export default function App() {
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <PieChartExample />
-      <Text>Open up App.js to start working on your app!</Text>      
-    </View>
+    <ChartPanel />
   );
 }
+
+
+class ChartPanel extends React.Component {
+
+  state = {
+    data: []
+  };
+
+  fetchChartData = () => {
+    fetch('https://trianglewebtech.com/sandbox/ReactJS/PieChartData.json')
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(new Date());
+        this.setState({data:json.data});
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  render() {
+    return     <View style={styles.container}>
+      <Button title="Click me!" onPress={() => this.fetchChartData()} />
+      <PieChartExample data={this.state.data} />
+    </View>
+
+  }
+}
+
+
 
 
 
 class PieChartExample extends React.Component {
     render() {
-        const data = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
-        const randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
-        const pieData = data
+        var randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
+        var pieData = this.props.data
             .filter((value) => value > 0)
             .map((value, index) => ({
                 value,
