@@ -38,5 +38,7 @@ expo start
 ## RESOURCES:
 
 https://github.com/JesperLekland/react-native-svg-charts
+
 https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found
+
 https://fantashit.com/unable-to-load-script-make-sure-you-are-either-running-a-metro-server-or-that-your-bundle-index-android-bundle-is-packaged-correctly-for-release/
