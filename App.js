@@ -39,14 +39,17 @@ class ChartPanel extends React.Component {
 
   state = {
     data: []
+    , colors:[]
+    , labels:[]
   };
 
   fetchChartData = () => {
-    fetch('https://trianglewebtech.com/sandbox/ReactJS/PieChartData.json')
+    fetch('https://trianglewebtech.com/sandbox/ReactJS/pieChartData.php?t='+(new Date()))
       .then((response) => response.json())
       .then((json) => {
         console.log(new Date());
-        this.setState({data:json.data});
+        console.log(JSON.stringify(json.data));
+        this.setState({data:json.data, colors:json.colors, labels:json.labels});
       })
       .catch((error) => {
         console.error(error);
@@ -56,7 +59,7 @@ class ChartPanel extends React.Component {
   render() {
     return     <View style={styles.container}>
       <Button title="Click me!" onPress={() => this.fetchChartData()} />
-      <PieChartExample data={this.state.data} />
+      <PieChartExample data={this.state.data} colors={this.state.colors} labels={this.state.labels} />
     </View>
 
   }
@@ -69,17 +72,23 @@ class ChartPanel extends React.Component {
 class PieChartExample extends React.Component {
     render() {
         var randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
+        console.log(this.props);
         var pieData = this.props.data
             .filter((value) => value > 0)
             .map((value, index) => ({
                 value,
                 svg: {
-                    fill: randomColor(),
+                    fill: this.props.colors[index],
+//                    fill: randomColor(),
                     onPress: () => console.log('press', index),
                 },
                 key: `pie-${index}`,
             }))
-        return <PieChart style={{ height: 200, width:300 }} data={pieData} />
+        return <PieChart 
+          style={{ height: 200, width:300 }}
+          data={pieData}
+//          valueAccessor={ ({ item }) => this.props.labels.length }
+           />
     }
 }
 
