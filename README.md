@@ -4,6 +4,8 @@ React Native App using D3
 
 ## Installation
 
+Create a generic app:
+
 ```
 npm install -g react-native-cli
 react-native init charts
@@ -13,6 +15,10 @@ npm install --save react-native-svg-charts
 mkdir android/app/src/main/assets
 "sdk.dir = /home/USERNAME/Android/Sdk" > android/local.properties
 yes | ~/Android/Sdk/tools/bin/sdkmanager --licenses
+```
+Then swap out the App.js file with the one in this repo and run the rest of this:
+
+```
 react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 npx react-native run-android
 ```
