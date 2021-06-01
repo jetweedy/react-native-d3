@@ -44,11 +44,12 @@ class ChartPanel extends React.Component {
     /*
     axios.get('https://trianglewebtech.com/sandbox/ReactJS/pieChartData.php', {
       action: 'delete',
+
       label: label
     })
     .then((response) => {
       console.log(response);
-      this.fetchChartData();
+//      this.setState({values:json.values, labels:json.labels});
     })
     .catch((error) => {
       console.log(error);
@@ -56,24 +57,25 @@ class ChartPanel extends React.Component {
     */
 
     var durl = 'https://trianglewebtech.com/sandbox/ReactJS/pieChartData.php'
+
                 + '?action=delete'
                 + '&label='+label
                 + '&t='+(new Date());
+
      fetch(durl
-//            , {
-//                  method: 'POST',
+            , {
 //                  headers: {
-//                    Accept: 'application/json',
-//                    'Content-Type': 'application/json'
+//                    'Accept': 'application/json',
+//                    'Content-Type': 'application/json charset=UTF-8'
 //                  },
+
+//                  method: 'POST',
 //                  body: JSON.stringify({
 //                    label: label,
 //                    action: "delete",
 //                  })
-//                }
-              , (response) => {
-                console.log(response);
-              }
+                }
+
           )
           .then((response) => response.json())
           .then((json) => {
@@ -83,8 +85,9 @@ class ChartPanel extends React.Component {
             console.log("--------------------------------------------------");
             this.setState({values:json.values, labels:json.labels});
           })
+          .catch((error) => console.log(error));
   //    this.fetchChartData();
-  
+
   }
 
   initDelete = (i) => {
