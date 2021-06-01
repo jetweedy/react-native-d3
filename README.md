@@ -2,6 +2,11 @@
 
 React Native App using D3
 
+## Issues / Laundry List
+
+1. Figure out what's going on with posting to that TWT url. 'Get' works fine. 'Post' returns nonsense and the changes don't happen.
+2. Create a .Net Core API for this on Azure or CloudApps and switch to using that.
+
 ## Installation
 
 Create a generic app:
