@@ -18,13 +18,13 @@ npm install react-native
 npm install react-native-svg
 npm install --save react-native-svg-charts
 ```
-3. Then swap out one of the Apps/_____.js files with the one that was created for you by expo.
+3. Then copy the contents of one of the Apps/_____.js files (like Apps/D3-Example.js) and use it to overwrite the contents of the App.js file in the newly-generated project folder created by expo.
 
 4. Then try running this:
 ```
 expo start
 ```
-5. You might get a few module errors, in which case you'll want to npm install them...
+5. Depending on which app you're running, you might get a few module errors, in which case you'll want to npm install them...
 ```
 npm install _____________
 ```
