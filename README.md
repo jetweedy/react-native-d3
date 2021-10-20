@@ -18,7 +18,7 @@ expo init charts
 cd charts
 npm install
 npm install --save react-native-svg-charts --no-bin-links
-mkdir android/app/src/main/assets
+mkdir -p android/app/src/main/assets
 "sdk.dir = /home/USERNAME/Android/Sdk" > android/local.properties
 yes | ~/Android/Sdk/tools/bin/sdkmanager --licenses
 ```
