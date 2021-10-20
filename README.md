@@ -27,7 +27,7 @@ expo start
 6. A browser window probably opens too, with some app admin tools. If you have issues getting it to connect in step 5, consider switching from "LAN" to "Tunnel" mode, and then repeat the QR code scan step from fresh and see if that gets you somewhere. (Source: https://newbedev.com/expo-go-network-response-timed-out-code-example)
 7. To run on different ports (like if you're going to try to route from Vagrant or something), try [this tip](https://forums.expo.dev/t/run-exp-start-on-another-port/6404/2).
 
-## Chart Resources:
+## Chart and Android Build Resources:
 
 https://github.com/JesperLekland/react-native-svg-charts
 
