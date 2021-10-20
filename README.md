@@ -29,6 +29,8 @@ expo start
 
 ## Chart and Android Build Resources:
 
+https://docs.expo.dev/distribution/building-standalone-apps/
+
 https://github.com/JesperLekland/react-native-svg-charts
 
 https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found
