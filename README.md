@@ -18,13 +18,18 @@ npm install react-native
 npm install react-native-svg
 npm install --save react-native-svg-charts
 ```
-3. Then swap out the App.js file with the one in this repo. (So basically copy the one from here into the new 'charts' folder that was created when you used 'expo init'.)
+3. Then swap out one of the Apps/_____.js files with the one that was created for you by expo.
+
 4. Then try running this:
 ```
 expo start
 ```
-5. When a QR code is displayed, use your Expo app to scan it and open the app in your mobile device.
-6. A browser window probably opens too, with some app admin tools. If you have issues getting it to connect in step 5, consider switching from "LAN" to "Tunnel" mode, and then repeat the QR code scan step from fresh and see if that gets you somewhere. (Source: https://newbedev.com/expo-go-network-response-timed-out-code-example)
+5. You might get a few module errors, in which case you'll want to npm install them...
+```
+npm install _____________
+```
+6. When a QR code is displayed, use your Expo app to scan it and open the app in your mobile device.
+7. A browser window probably opens too, with some app admin tools. If you have issues getting it to connect in step 5, consider switching from "LAN" to "Tunnel" mode, and then repeat the QR code scan step from fresh and see if that gets you somewhere. (Source: https://newbedev.com/expo-go-network-response-timed-out-code-example)
 7. To run on different ports (like if you're going to try to route from Vagrant or something), try [this tip](https://forums.expo.dev/t/run-exp-start-on-another-port/6404/2).
 
 ## Chart and Android Build Resources:
