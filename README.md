@@ -1,4 +1,4 @@
-# react-native-d3
+# react-native-expo
 
 React Native App using D3, and then running it using the Expo app on your mobile device.
 
