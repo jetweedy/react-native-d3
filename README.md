@@ -4,22 +4,14 @@ React Native App using D3, and then running it using the Expo app on your mobile
 
 ## Installation
 
-0. Make sure you have the appropriate [NPM/Node requirements](https://docs.expo.dev/get-started/installation/#requirements) installed.
-1. Install the [Expo app](https://expo.dev/) on your mobile device.
-2. Create a generic app:
+https://docs.expo.dev/get-started/create-a-new-app/
+First make sure to install Node/NPM/NPX, and then...
+
 ```
-npm install -g react-native-cli
-npm install -g expo-cli
-expo init charts
-cd charts
-npm install
-npm install expo-status-bar
-npm install axios
-npm install react-native
-npm install react-native-svg
-npm install --save react-native-svg-charts
+npx create-expo-app my-app
+cd my-app
+npx expo start
 ```
-3. Then copy the contents of one of the Apps/_____.js files (like Apps/D3-Example.js) and use it to overwrite the contents of the App.js file in the newly-generated project folder created by expo.
 
 4. Then try running this:
 ```
