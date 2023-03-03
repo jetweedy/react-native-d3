@@ -11,7 +11,7 @@ First make sure to install Node/NPM/NPX, and then...
 ```
 npx create-expo-app my-app
 cd my-app
-npx expo start
+expo start --tunnel
 ```
 
 When a QR code is displayed, use your Expo app to scan it and open the app in your mobile device.
