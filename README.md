@@ -5,6 +5,7 @@ React Native App using D3, and then running it using the Expo app on your mobile
 ## Installation
 
 https://docs.expo.dev/get-started/create-a-new-app/
+
 First make sure to install Node/NPM/NPX, and then...
 
 ```
